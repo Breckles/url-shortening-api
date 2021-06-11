@@ -1,7 +1,17 @@
+import { ReactNode } from 'react';
+
 import classes from './Header.module.scss';
 
-const Header = () => {
-  return <div>Header Component</div>;
+type HeaderProps = {
+  className: string;
+};
+
+const Header = ({ className }: HeaderProps) => {
+  return (
+    <header className={`${className} ${classes.header}`}>
+      Header Component
+    </header>
+  );
 };
 
 export default Header;
