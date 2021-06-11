@@ -1,7 +1,9 @@
 import { ReactNode } from 'react';
 
+import classes from './RoundedSidesButton.module.scss';
+
 export type ButtonProps = {
-  type: 'button' | 'submit' | 'reset' | undefined;
+  type?: 'button' | 'submit' | 'reset';
   children?: ReactNode;
 };
 
