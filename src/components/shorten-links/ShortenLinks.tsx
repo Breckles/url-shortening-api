@@ -1,7 +1,7 @@
 import classes from './ShortenLinks.module.scss';
 
 const ShortenLinks = () => {
-  return <div>Features Component</div>;
+  return <div>ShortenLinks Component</div>;
 };
 
 export default ShortenLinks;
