@@ -14,7 +14,7 @@ const Header = ({ className }: HeaderProps) => {
       <div className={classes.logo}>
         <img src={logo} alt="The Shortly Logo" />
       </div>
-      <HeaderNav />
+      <HeaderNav className={classes.headerNav} />
     </header>
   );
 };

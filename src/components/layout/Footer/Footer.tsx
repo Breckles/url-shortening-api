@@ -1,7 +1,15 @@
 import classes from './Footer.module.scss';
 
-const Footer = () => {
-  return <div>Footer Component</div>;
+type footerProps = {
+  className?: string;
+};
+
+const Footer = ({ className }: footerProps) => {
+  return (
+    <footer className={`${className} ${classes.footer}`}>
+      Footer Component
+    </footer>
+  );
 };
 
 export default Footer;

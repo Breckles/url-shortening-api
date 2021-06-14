@@ -13,9 +13,9 @@ type layoutProps = {
 const Layout = ({ children, className }: layoutProps) => {
   return (
     <div className={`${className || ''} ${classes.layout}`}>
-      <Header />
+      <Header className={classes.header} />
       <main>{children}</main>
-      <Footer />
+      <Footer className={classes.footer} />
     </div>
   );
 };
