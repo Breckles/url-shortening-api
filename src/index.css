@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Poppins';
-  src: url("./assets/fonts/poppins-bold-webfont.woff2") format('woff2'),
+  src: url("./assets/fonts/poppins-medium-webfont.woff2") format('woff2'),
     url('./assets/fonts/poppins-medium-webfont.woff') format('woff');
-  font-weight: medium;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -10,7 +10,7 @@
   font-family: 'Poppins';
   src: url("./assets/fonts/poppins-bold-webfont.woff2") format('woff2'),
     url('./assets/fonts/poppins-bold-webfont.woff') format('woff');
-  font-weight: bold;
+  font-weight: 700;
   font-style: normal;
 }
 
@@ -42,6 +42,7 @@ html {
   --font-family: Poppins, Arial, Helvetica, sans-serif;
 
   --text-primary: var(--greyish-violet);
+  --text-secondary: var(--very-dark-blue);
   --button-background-color: var(--cyan);
   --button-text-color: white;
   --modal-background-color: var(--dark-violet);
@@ -52,6 +53,8 @@ html {
 
   font-family: var(--font-family);
   font-size: 10px;
+  font-weight: 500;
+  color: var(--text-primary);
 }
 
 body {

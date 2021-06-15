@@ -1,7 +1,13 @@
 import { Fragment } from 'react';
 
+import HeroImage from '../components/hero-image/HeroImage';
+
 const LandingPage = () => {
-  return <Fragment>Landing Page</Fragment>;
+  return (
+    <Fragment>
+      <HeroImage />
+    </Fragment>
+  );
 };
 
 export default LandingPage;

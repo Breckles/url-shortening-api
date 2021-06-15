@@ -1,0 +1,27 @@
+.heroImage {}
+
+.heroImage img {
+  width: 155%;
+}
+
+.heroImage article {
+  text-align: center;
+  margin-top: 40px;
+
+  h2 {
+    color: var(--text-secondary);
+    font-size: 4.3rem;
+    letter-spacing: -1px;
+    line-height: 1.1;
+  }
+
+  p {
+    margin-top: 1.3rem;
+    line-height: 1.6;
+  }
+
+  button {
+    margin-top: 3rem;
+    width: 62%;
+  }
+}

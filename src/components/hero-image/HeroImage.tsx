@@ -1,7 +1,28 @@
+import RoundedSidesButton from '../ui/buttons/RoundedSidesButton';
+
+import officeWorkerImage from '../../assets//images/illustration-working.svg';
+
 import classes from './HeroImage.module.scss';
 
-const HeroImage = () => {
-  return <div>HeroImage Component</div>;
+type HeroImageProps = {
+  className?: string;
+};
+
+const HeroImage = ({ className = '' }: HeroImageProps) => {
+  return (
+    <section className={`${className} ${classes.heroImage}`}>
+      {/* Leaving alt text empty because image is just decoration. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt */}
+      <img src={officeWorkerImage} alt="" />
+      <article>
+        <h2>More than just shorter links</h2>
+        <p>
+          Build your brand's recognition and get detailed insights on how your
+          links are performing.
+        </p>
+        <RoundedSidesButton>Get Started</RoundedSidesButton>
+      </article>
+    </section>
+  );
 };
 
 export default HeroImage;
