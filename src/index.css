@@ -30,7 +30,6 @@ html {
 
   /* Secondary */
   --red: hsl(0, 87%, 67%);
-  --ffeffe: hsl(256, 10%, 21%);
 
   /* Neutral */
   --grey: hsl(0, 0%, 75%);
@@ -45,6 +44,9 @@ html {
   --text-primary: var(--greyish-violet);
   --button-background-color: var(--cyan);
   --button-text-color: white;
+  --modal-background-color: var(--dark-violet);
+  --mobile-nav-text-color: white;
+  --mobile-nav-divider-color: var(--grey);
 
   /* //////////////////////////////////// */
 

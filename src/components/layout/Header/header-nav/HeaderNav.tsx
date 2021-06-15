@@ -12,18 +12,22 @@ type HeaderNavProps = {
 };
 
 const HeaderNav = ({ className }: HeaderNavProps) => {
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
+  const [showMobileNav, setShowMobileNav] = useState(false);
 
-  const toggleShowMobileMenuHandler = () => {
-    setShowMobileMenu((prevState) => !prevState);
+  const showMobileNavHandler = () => {
+    setShowMobileNav(true);
+  };
+
+  const closeMobileNavHandler = () => {
+    setShowMobileNav(false);
   };
 
   return (
     <div className={`${className || ''} ${classes.headerNav}`}>
-      <button type="button" onClick={toggleShowMobileMenuHandler}>
+      <button type="button" onClick={showMobileNavHandler}>
         <img src={hamburgerIcon} alt="The Menu Icon" />
       </button>
-      {showMobileMenu && <MobileNav />}
+      {showMobileNav && <MobileNav onClose={closeMobileNavHandler} />}
       <nav>
         <div>
           <a href="/">Features</a>

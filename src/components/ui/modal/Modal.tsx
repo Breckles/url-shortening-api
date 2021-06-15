@@ -1,8 +1,6 @@
 import { ReactNode, Fragment } from 'react';
 import { createPortal } from 'react-dom';
 
-import Card from '../cards/Card';
-
 import classes from './Modal.module.scss';
 
 type ModalProps = {
@@ -24,11 +22,7 @@ const Backdrop = ({ onClose }: BackdropProps) => {
 };
 
 const ModalOverlay = ({ children }: ModalOverlayProps) => {
-  return (
-    <Card className={classes.modal}>
-      <div className={classes.content}>{children}</div>
-    </Card>
-  );
+  return <div className={classes.modal}>{children}</div>;
 };
 
 const portalElement = document.getElementById('overlays')!;
