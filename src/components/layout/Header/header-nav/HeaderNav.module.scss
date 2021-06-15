@@ -5,9 +5,41 @@
   height: 100%;
 }
 
-.hamburgerIcon {
+.headerNav>button {
+  border: none;
+  background: none;
+}
+
+.headerNav>button img {
   margin-left: auto;
   width: 25px;
 }
 
-.nav {}
+.headerNav nav {
+  display: flex;
+  display: none;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.headerNav div {
+  display: flex;
+  align-items: center;
+}
+
+.headerNav a {
+  margin: 0 16px;
+
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.headerNav a:first-child {
+  margin-left: 0;
+}
+
+.headerNav a:last-child {
+  margin-right: 0;
+}

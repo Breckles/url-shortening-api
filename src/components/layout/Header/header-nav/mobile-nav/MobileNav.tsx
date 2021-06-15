@@ -1,5 +1,7 @@
 import classes from './MobileNav.module.scss';
 
-const MobileNav = () => {};
+const MobileNav = () => {
+  return <div></div>;
+};
 
 export default MobileNav;

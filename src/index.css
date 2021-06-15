@@ -30,6 +30,7 @@ html {
 
   /* Secondary */
   --red: hsl(0, 87%, 67%);
+  --ffeffe: hsl(256, 10%, 21%);
 
   /* Neutral */
   --grey: hsl(0, 0%, 75%);
@@ -37,7 +38,17 @@ html {
   --very-dark-blue: hsl(255, 11%, 22%);
   --very-dark-violet: hsl(260, 8%, 14%);
 
-  font-family: Poppins, Arial, Helvetica, sans-serif;
+  /* /////////////////////////////////// */
+
+  --font-family: Poppins, Arial, Helvetica, sans-serif;
+
+  --text-primary: var(--greyish-violet);
+  --button-background-color: var(--cyan);
+  --button-text-color: white;
+
+  /* //////////////////////////////////// */
+
+  font-family: var(--font-family);
   font-size: 10px;
 }
 
