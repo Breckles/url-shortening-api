@@ -51,6 +51,8 @@ html {
   --selling-points-background-color: var(--grey);
   --selling-point-background-color: white;
   --selling-point-connector-color: var(--cyan);
+  --call-to-action-background-color: var(--dark-violet);
+  --call-to-action-text-color: white;
   --icon-background-color: var(--dark-violet);
 
   /* //////////////////////////////////// */

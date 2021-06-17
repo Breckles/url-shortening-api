@@ -1,0 +1,19 @@
+.callToAction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--call-to-action-background-color);
+  background-image: url('../../assets/images/bg-boost-mobile.svg');
+}
+
+.callToAction h3 {
+  color: var(--call-to-action-text-color);
+  font-size: 2.8rem;
+  // margin-bottom: 20px;
+}
+
+.button {
+  margin-top: 20px;
+  width: 205px;
+}
