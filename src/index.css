@@ -52,8 +52,11 @@ html {
   --selling-point-background-color: white;
   --selling-point-connector-color: var(--cyan);
   --call-to-action-background-color: var(--dark-violet);
-  --call-to-action-text-color: white;
+  --call-to-action-text-color: #ffffff;
   --icon-background-color: var(--dark-violet);
+  --footer-background-color: var(--very-dark-violet);
+  --footer-heading-text-color: white;
+  --footer-link-hover-color: var(--cyan);
 
   /* //////////////////////////////////// */
 
