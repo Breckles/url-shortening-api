@@ -14,7 +14,7 @@ const SellingPoint = ({
   className = '',
 }: SellingPointProps) => {
   return (
-    <article className={classes.sellingPoint}>
+    <article className={`${className} ${classes.sellingPoint}`}>
       <div className={classes.iconContainer}>
         <img src={iconPath} alt="" />
       </div>
