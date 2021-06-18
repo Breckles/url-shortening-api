@@ -58,6 +58,9 @@ html {
   --footer-heading-text-color: white;
   --footer-link-hover-color: var(--cyan);
 
+  --spinner-color: var(--cyan);
+  --spinner-background-color: var(--grey);
+
   /* //////////////////////////////////// */
 
   font-family: var(--font-family);

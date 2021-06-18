@@ -1,3 +1,7 @@
+import { useRef, Fragment, FormEvent } from 'react';
+
+import LoadingSpinner from '../../ui/spinners/LoadingSpinner';
+
 import classes from './ShortenLinkForm.module.scss';
 
 type ShortenLinkFormProps = {
@@ -5,16 +9,36 @@ type ShortenLinkFormProps = {
 };
 
 const ShortenLinkForm = ({ className = '' }: ShortenLinkFormProps) => {
-  return (
-    <form className={`${className} ${classes.form}`}>
+  const linkInputRef = useRef<HTMLInputElement>(null);
+
+  const isLoading = true;
+
+  const submitHandler = (event: FormEvent) => {
+    event.preventDefault();
+    const enteredURL = linkInputRef.current!.value;
+    console.log(enteredURL);
+  };
+
+  let content = (
+    <Fragment>
       <input
-        id="link"
         type="text"
         placeholder="Shorten a link here..."
         aria-label="Shorten a link here"
         title="Shorten a link here"
+        ref={linkInputRef}
       />
       <button type="submit">Shorten It!</button>
+    </Fragment>
+  );
+
+  if (isLoading) {
+    content = <LoadingSpinner />;
+  }
+
+  return (
+    <form className={`${className} ${classes.form}`} onSubmit={submitHandler}>
+      {content}
     </form>
   );
 };
