@@ -5,7 +5,18 @@ type ShortenLinkFormProps = {
 };
 
 const ShortenLinkForm = ({ className = '' }: ShortenLinkFormProps) => {
-  return <form></form>;
+  return (
+    <form className={`${className} ${classes.form}`}>
+      <input
+        id="link"
+        type="text"
+        placeholder="Shorten a link here..."
+        aria-label="Shorten a link here"
+        title="Shorten a link here"
+      />
+      <button type="submit">Shorten It!</button>
+    </form>
+  );
 };
 
 export default ShortenLinkForm;
