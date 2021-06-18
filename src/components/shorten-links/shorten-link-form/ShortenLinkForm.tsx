@@ -11,7 +11,7 @@ type ShortenLinkFormProps = {
 const ShortenLinkForm = ({ className = '' }: ShortenLinkFormProps) => {
   const linkInputRef = useRef<HTMLInputElement>(null);
 
-  const isLoading = true;
+  const isLoading = false;
 
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();

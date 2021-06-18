@@ -1,1 +1,20 @@
-.shortenLinks {}
+.shortenLinks {
+  position: relative;
+
+  &>* {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.background {
+  position: absolute;
+  z-index: 0;
+  left: 0;
+  top: 8.25rem;
+  width: 100%;
+  height: calc(100% - 8.25rem);
+
+  background-color: var(--shorten-links-background-color);
+  opacity: 0.25;
+}

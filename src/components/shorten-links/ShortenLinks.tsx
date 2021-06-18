@@ -12,6 +12,7 @@ const ShortenLinks = ({ className = '' }: ShortenLinksProps) => {
     <section className={`${className} ${classes.shortenLinks}`}>
       <ShortenLinkForm />
       <ShortenedLinks />
+      <div className={classes.background}></div>
     </section>
   );
 };

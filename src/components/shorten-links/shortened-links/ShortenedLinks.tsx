@@ -5,7 +5,7 @@ type ShortenedLinksProps = {
 };
 
 const ShortenedLinks = ({ className = '' }: ShortenedLinksProps) => {
-  return <form></form>;
+  return <ul></ul>;
 };
 
 export default ShortenedLinks;

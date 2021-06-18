@@ -48,12 +48,18 @@ html {
   --modal-background-color: var(--dark-violet);
   --mobile-nav-text-color: white;
   --mobile-nav-divider-color: var(--grey);
+
+  --shorten-links-background-color: var(--grey);
+  --shorten-link-form-background-color: var(--dark-violet);
+
   --selling-points-background-color: var(--grey);
   --selling-point-background-color: white;
   --selling-point-connector-color: var(--cyan);
+  --icon-background-color: var(--dark-violet);
+
   --call-to-action-background-color: var(--dark-violet);
   --call-to-action-text-color: #ffffff;
-  --icon-background-color: var(--dark-violet);
+
   --footer-background-color: var(--very-dark-violet);
   --footer-heading-text-color: white;
   --footer-link-hover-color: var(--cyan);
