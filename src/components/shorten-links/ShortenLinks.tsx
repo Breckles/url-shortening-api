@@ -1,7 +1,11 @@
 import classes from './ShortenLinks.module.scss';
 
-const ShortenLinks = () => {
-  return <div>ShortenLinks Component</div>;
+type ShortenLinksProps = {
+  className?: string;
+};
+
+const ShortenLinks = ({ className = '' }: ShortenLinksProps) => {
+  return <section className={`${className} ${classes.shortenLinks}`}></section>;
 };
 
 export default ShortenLinks;
