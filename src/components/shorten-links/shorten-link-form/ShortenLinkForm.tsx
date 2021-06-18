@@ -1,6 +1,7 @@
 import { useRef, Fragment, FormEvent } from 'react';
 
 import LoadingSpinner from '../../ui/spinners/LoadingSpinner';
+import RoundedCornersButton from '../../ui/buttons/RoundedCornersButton';
 
 import classes from './ShortenLinkForm.module.scss';
 
@@ -28,7 +29,9 @@ const ShortenLinkForm = ({ className = '' }: ShortenLinkFormProps) => {
         title="Shorten a link here"
         ref={linkInputRef}
       />
-      <button type="submit">Shorten It!</button>
+      <RoundedCornersButton className={classes.button} type="submit">
+        Shorten It!
+      </RoundedCornersButton>
     </Fragment>
   );
 

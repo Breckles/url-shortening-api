@@ -10,8 +10,8 @@ type ShortenLinksProps = {
 const ShortenLinks = ({ className = '' }: ShortenLinksProps) => {
   return (
     <section className={`${className} ${classes.shortenLinks}`}>
-      <ShortenLinkForm />
-      <ShortenedLinks />
+      <ShortenLinkForm className={classes.shortenLinkForm} />
+      <ShortenedLinks className={classes.shortenedLinks} />
       <div className={classes.background}></div>
     </section>
   );

@@ -52,6 +52,12 @@ html {
   --shorten-links-background-color: var(--grey);
   --shorten-link-form-background-color: var(--dark-violet);
 
+  --shortened-link-background-color: white;
+  --shortened-link-long-color: var(--very-dark-blue);
+  --shortened-link-separator-color: var(--grey);
+  --shortened-link-short-color: var(--cyan);
+  --shortened-link-activated-button-background-color: var(--dark-violet);
+
   --selling-points-background-color: var(--grey);
   --selling-point-background-color: white;
   --selling-point-connector-color: var(--cyan);

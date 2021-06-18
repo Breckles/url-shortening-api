@@ -3,12 +3,21 @@ import { ReactNode } from 'react';
 import classes from './RoundedCornersButton.module.scss';
 
 type ButtonProps = {
+  children: ReactNode;
   type?: 'button' | 'submit' | 'reset';
-  children?: ReactNode;
+  className?: string;
 };
 
-const RoundedSidesButton = ({ type, children }: ButtonProps) => {
-  return <button type={type || 'button'}>{children}</button>;
+const RoundedSidesButton = ({
+  children,
+  type = 'button',
+  className = '',
+}: ButtonProps) => {
+  return (
+    <button type={type} className={`${className} ${classes.button}`}>
+      {children}
+    </button>
+  );
 };
 
 export default RoundedSidesButton;

@@ -1,3 +1,5 @@
+import ShortenedLink from './shortened-link/ShortenedLink';
+
 import classes from './ShortenedLinks.module.scss';
 
 type ShortenedLinksProps = {
@@ -5,7 +7,16 @@ type ShortenedLinksProps = {
 };
 
 const ShortenedLinks = ({ className = '' }: ShortenedLinksProps) => {
-  return <ul></ul>;
+  return (
+    <ul className={`${className} ${classes.shortenedLinks}`}>
+      <li>
+        <ShortenedLink
+          url="https://www.frontendmentor.io"
+          shortenedURL="https://rel.ink/k4lKyk"
+        />
+      </li>
+    </ul>
+  );
 };
 
 export default ShortenedLinks;
