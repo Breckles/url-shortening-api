@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { ShortcodeLink } from './ShortcodeLink.model';
 
@@ -12,29 +12,22 @@ type ShortenLinksProps = {
 };
 
 const ShortenLinks = ({ className = '' }: ShortenLinksProps) => {
-  const [shortenedLinks, setShortenedLinks] = useState<ShortcodeLink[]>([
-    {
-      original_link: 'https://frontendmentor.io',
-      full_short_link: 'https://rel.ink/k4lKyk',
-    },
-    {
-      original_link: 'https://frontendmentor.io',
-      full_short_link: 'https://rel.ink/k4lKyk',
-    },
-    {
-      original_link: 'https://frontendmentor.io',
-      full_short_link: 'https://rel.ink/k4lKyk',
-    },
-    {
-      original_link: 'https://frontendmentor.io',
-      full_short_link: 'https://rel.ink/k4lKyk',
-    },
-  ]);
+  const [shortenedLinks, setShortenedLinks] = useState<ShortcodeLink[]>([]);
+
+  useEffect(() => {
+    const storedLinks = sessionStorage.getItem('shortenedLinks');
+
+    if (storedLinks) {
+      const shortenedLinks = JSON.parse(storedLinks) as ShortcodeLink[];
+      setShortenedLinks(shortenedLinks);
+    }
+  }, []);
 
   const onAddShortenedLink = (link: ShortcodeLink) => {
     setShortenedLinks((currentList: ShortcodeLink[]) => {
       const newList = [...currentList];
-      newList.push(link);
+      newList.unshift(link);
+      sessionStorage.setItem('shortenedLinks', JSON.stringify(newList));
       return newList;
     });
   };

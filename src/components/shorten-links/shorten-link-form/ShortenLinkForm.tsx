@@ -21,7 +21,7 @@ const ShortenLinkForm = ({
 }: ShortenLinkFormProps) => {
   const [inputError, setInputError] = useState<string | null>(null);
   const { isLoading, sendRequest: getShortenedLink } =
-    useHttp<ShortCodeResponse>(true);
+    useHttp<ShortCodeResponse>(false);
 
   const linkInputRef = useRef<HTMLInputElement>(null);
 
