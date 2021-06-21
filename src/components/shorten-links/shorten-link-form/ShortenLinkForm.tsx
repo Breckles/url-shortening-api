@@ -21,7 +21,7 @@ const ShortenLinkForm = ({
 }: ShortenLinkFormProps) => {
   const [inputError, setInputError] = useState<string | null>(null);
   const { isLoading, sendRequest: getShortenedLink } =
-    useHttp<ShortCodeResponse>();
+    useHttp<ShortCodeResponse>(true);
 
   const linkInputRef = useRef<HTMLInputElement>(null);
 
@@ -98,7 +98,20 @@ const ShortenLinkForm = ({
       onSubmit={submitHandler}
       noValidate
     >
-      {content}
+      <input
+        className={inputError ? classes.error : ''}
+        type="url"
+        placeholder="Shorten a link here..."
+        aria-label="Shorten a link here"
+        title="Shorten a link here"
+        ref={linkInputRef}
+        required
+      />
+      {inputError && <span className={classes.errorText}>{inputError}</span>}
+      <RoundedCornersButton className={classes.button} type="submit">
+        Shorten It!
+      </RoundedCornersButton>
+      {isLoading && <LoadingSpinner className={classes.loadingSpinner} />}
     </form>
   );
 };

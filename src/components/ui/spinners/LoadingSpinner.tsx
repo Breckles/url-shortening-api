@@ -1,8 +1,12 @@
 import classes from './LoadingSpinner.module.scss';
 
-const LoadingSpinner = () => {
+type LoadingSpinnerProps = {
+  className?: string;
+};
+
+const LoadingSpinner = ({ className }: LoadingSpinnerProps) => {
   return (
-    <div className={classes.spinnerContainer}>
+    <div className={`${className} ${classes.spinnerContainer}`}>
       <div className={classes['lds-default']}>
         <div></div>
         <div></div>

@@ -72,7 +72,7 @@ html {
   --footer-heading-text-color: white;
   --footer-link-hover-color: var(--cyan);
 
-  --spinner-color: var(--cyan);
+  --spinner-color: var(--dark-violet);
   --spinner-background-color: var(--grey);
 
   /* //////////////////////////////////// */
