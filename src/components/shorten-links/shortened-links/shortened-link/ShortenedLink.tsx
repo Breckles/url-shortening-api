@@ -18,9 +18,30 @@ const ShortenedLink = ({
   const [isCopied, setIsCopied] = useState(false);
 
   const copyShortenedLinkHandler = () => {
-    navigator.clipboard.writeText(shortenedURL).then(() => {
+    if (navigator.userAgent.match(/ipad|iphone/i)) {
+      // handle copying for ios devices
+      const textArea = document.createElement(
+        'textarea'
+      ) as HTMLTextAreaElement;
+      textArea.readOnly = true;
+      textArea.contentEditable = 'true';
+      textArea.value = shortenedURL;
+      document.body.appendChild(textArea);
+
+      const range = document.createRange();
+      range.selectNodeContents(textArea);
+      const selection = window.getSelection()!;
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textArea.setSelectionRange(0, 999999);
+      document.execCommand('copy');
+      document.body.removeChild(textArea);
       setIsCopied(true);
-    });
+    } else {
+      navigator.clipboard.writeText(shortenedURL).then(() => {
+        setIsCopied(true);
+      });
+    }
   };
 
   return (
