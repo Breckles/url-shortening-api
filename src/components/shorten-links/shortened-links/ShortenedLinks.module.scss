@@ -1,3 +1,11 @@
 .shortenedLinks {
   list-style-type: none;
 }
+
+.shortenedLinks li {
+  margin-bottom: 25px;
+}
+
+.shortenedLinks li:last-child {
+  margin-bottom: 0;
+}

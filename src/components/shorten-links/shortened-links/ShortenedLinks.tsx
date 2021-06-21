@@ -1,21 +1,26 @@
+import { ShortcodeLink } from '../ShortcodeLink.model';
+
 import ShortenedLink from './shortened-link/ShortenedLink';
 
 import classes from './ShortenedLinks.module.scss';
 
 type ShortenedLinksProps = {
+  links: ShortcodeLink[];
   className?: string;
 };
 
-const ShortenedLinks = ({ className = '' }: ShortenedLinksProps) => {
+const ShortenedLinks = ({ links, className = '' }: ShortenedLinksProps) => {
+  const listItems = links.map((link, index) => (
+    <li key={index}>
+      <ShortenedLink
+        url={link.original_link}
+        shortenedURL={link.full_short_link}
+      />
+    </li>
+  ));
+
   return (
-    <ul className={`${className} ${classes.shortenedLinks}`}>
-      <li>
-        <ShortenedLink
-          url="https://www.frontendmentor.io"
-          shortenedURL="https://rel.ink/k4lKyk"
-        />
-      </li>
-    </ul>
+    <ul className={`${className} ${classes.shortenedLinks}`}>{listItems}</ul>
   );
 };
 

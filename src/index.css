@@ -29,7 +29,7 @@ html {
   --dark-violet: hsl(257, 27%, 26%);
 
   /* Secondary */
-  --red: hsl(0, 87%, 67%);
+  --red: rgb(244, 98, 98);
 
   /* Neutral */
   --grey: hsl(0, 0%, 75%);
@@ -40,6 +40,8 @@ html {
   /* /////////////////////////////////// */
 
   --font-family: Poppins, Arial, Helvetica, sans-serif;
+  --error-text-color: rgba(244, 98, 98, 0.7);
+  --input-error-border-color: rgba(244, 98, 98, 0.9);
 
   --text-primary: var(--greyish-violet);
   --text-secondary: var(--very-dark-blue);

@@ -9,8 +9,6 @@
   background-image: url('../../../assets/images/bg-shorten-mobile.svg');
   background-repeat: no-repeat;
   background-position: top right;
-
-  button {}
 }
 
 .form input {
@@ -25,8 +23,26 @@
   font-family: var(--font-family);
 }
 
+.form input.error {
+  box-shadow:
+    3px 3px var(--input-error-border-color) inset,
+    -3px -3px var(--input-error-border-color) inset;
+}
+
 .form input::placeholder {
   opacity: 1;
+}
+
+.form input.error::placeholder {
+  color: var(--error-text-color);
+  opacity: 0.6;
+}
+
+.errorText {
+  margin-top: -8px;
+  color: var(--error-text-color);
+  font-size: 1.2rem;
+  font-style: italic;
 }
 
 .button {
