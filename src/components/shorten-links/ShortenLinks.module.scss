@@ -8,7 +8,6 @@
 }
 
 .shortenLinkForm {
-  // margin-bottom: 25px;
   position: relative;
   z-index: 2;
 }
@@ -16,7 +15,10 @@
 .shortenedLinks {
   position: relative;
   z-index: 1;
-  padding-top: 25px;
+
+  &>li:first-child {
+    padding-top: 25px;
+  }
 }
 
 .background {
