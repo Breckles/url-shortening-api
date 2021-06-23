@@ -37,7 +37,9 @@ const HeaderNav = ({ className }: HeaderNavProps) => {
         <div>
           <a href="/">Login</a>
           <a href="/">
-            <RoundedSidesButton>Sign Up</RoundedSidesButton>
+            <RoundedSidesButton className={classes.signUpButton}>
+              Sign Up
+            </RoundedSidesButton>
           </a>
         </div>
       </nav>
