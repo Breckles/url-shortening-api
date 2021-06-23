@@ -15,3 +15,17 @@
 .callToAction {
   padding: 95px 25px;
 }
+
+
+////////////////// Tablets ////////////////////
+
+@media screen and (min-width: 750px) {}
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {
+  .heroImage {
+    padding: 0 12% 88px;
+  }
+}

@@ -10,9 +10,9 @@ type layoutProps = {
   className?: string;
 };
 
-const Layout = ({ children, className }: layoutProps) => {
+const Layout = ({ children, className = '' }: layoutProps) => {
   return (
-    <div className={`${className || ''} ${classes.layout}`}>
+    <div className={`${className} ${classes.layout}`}>
       <Header className={classes.header} />
       <main>{children}</main>
       <Footer className={classes.footer} />

@@ -2,11 +2,30 @@
 
 .header {
   padding: 40px 25px 0;
+  margin-bottom: 25px;
 }
 
 main {
-  padding: 25px 0px 0px;
   overflow-x: hidden;
 }
 
 .footer {}
+
+
+//////////////// Tablets /////////////////////
+
+@media screen and (min-width: 750px) {
+  .header {
+    margin-bottom: 75px;
+  }
+}
+
+
+
+//////////////// Wider Screens /////////////////////
+
+@media screen and (min-width: 1200px) {
+  .header {
+    padding: 50px 12% 0;
+  }
+}

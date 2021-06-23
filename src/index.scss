@@ -24,6 +24,7 @@
 }
 
 html {
+
   /* Primary */
   --cyan: hsl(180, 66%, 49%);
   --dark-violet: hsl(257, 27%, 26%);
@@ -77,6 +78,8 @@ html {
 
   /* //////////////////////////////////// */
 
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family);
   font-size: 10px;
   font-weight: 500;
@@ -84,6 +87,6 @@ html {
 }
 
 body {
-  /* Set body font-size back to usual default */
+  flex: 1;
   font-size: 1.8rem
 }

@@ -1,7 +1,14 @@
-.heroImage {}
+.heroImage {
+  text-align: center;
+}
 
-.heroImage img {
-  width: 155%;
+.heroImage .imageWrapper {
+  width: 100%;
+}
+
+.imageWrapper img {
+  width: 100%;
+  min-width: 500px;
 }
 
 .heroImage article {
@@ -23,5 +30,65 @@
   button {
     margin-top: 3rem;
     width: 62%;
+    max-width: 200px;
+  }
+}
+
+
+//////////////////// Tablets //////////////////
+
+@media screen and (min-width: 750px) {
+  .heroImage {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  .heroImage .imageWrapper {
+    flex: 1 1 50%;
+  }
+
+  .imageWrapper img {
+    min-width: 0px;
+    transform: translateX(5%);
+  }
+
+  .heroImage article {
+    flex: 1 1 50%;
+    margin-top: 40px;
+  }
+}
+
+
+//////////////////// Wide Screens //////////////////
+
+@media screen and (min-width: 1200px) {
+  .heroImage .imageWrapper {
+    flex: 1 1 45%;
+  }
+
+  .imageWrapper img {
+    width: 160%;
+  }
+
+  .heroImage article {
+    flex: 1 1 65%;
+    text-align: left;
+    margin-top: 0px;
+
+
+    h2 {
+      font-size: 8rem;
+      // letter-spacing: -1.5px;
+      line-height: 1.11;
+    }
+
+    p {
+      width: 85%;
+      margin-top: -1px;
+      font-size: 2.2rem;
+      line-height: 1.7;
+      word-spacing: 1px;
+    }
   }
 }

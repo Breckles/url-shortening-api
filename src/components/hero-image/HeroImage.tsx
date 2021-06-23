@@ -12,7 +12,9 @@ const HeroImage = ({ className = '' }: HeroImageProps) => {
   return (
     <section className={`${className} ${classes.heroImage}`}>
       {/* Leaving alt text empty because image is just decoration. See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img#attr-alt */}
-      <img src={officeWorkerImage} alt="" />
+      <div className={classes.imageWrapper}>
+        <img src={officeWorkerImage} alt="" />
+      </div>
       <article>
         <h2>More than just shorter links</h2>
         <p>
