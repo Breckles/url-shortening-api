@@ -33,6 +33,7 @@ const ShortenLinkForm = ({
     const newShortenedLink: ShortcodeLink = {
       full_short_link: data.result.full_short_link,
       original_link: data.result.original_link,
+      code: data.result.code,
     };
 
     onAddShortenedLink(newShortenedLink);
@@ -41,6 +42,13 @@ const ShortenLinkForm = ({
   const submitHandler = (event: FormEvent) => {
     event.preventDefault();
     setInputError(null);
+
+    onAddShortenedLink({
+      full_short_link: 'eggy',
+      original_link: 'adhashd;fjhsdfkljh',
+      code: Date.now().toString(),
+    });
+    return;
 
     const linkInputEl = linkInputRef.current!;
     let errorMessage = null;

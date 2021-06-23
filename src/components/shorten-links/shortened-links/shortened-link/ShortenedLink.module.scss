@@ -15,6 +15,7 @@
 
 .longURL {
   overflow-x: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
   color: var(--shortened-link-long-color);
 }

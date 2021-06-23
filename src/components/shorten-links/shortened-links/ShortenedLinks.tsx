@@ -10,8 +10,8 @@ type ShortenedLinksProps = {
 };
 
 const ShortenedLinks = ({ links, className = '' }: ShortenedLinksProps) => {
-  const listItems = links.map((link, index) => (
-    <li key={index}>
+  const listItems = links.map((link) => (
+    <li key={link.code}>
       <ShortenedLink
         url={link.original_link}
         shortenedURL={link.full_short_link}

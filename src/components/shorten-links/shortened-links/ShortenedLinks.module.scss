@@ -4,8 +4,24 @@
 
 .shortenedLinks li {
   margin-bottom: 25px;
+
+  animation-name: slideDown;
+  animation-timing-function: ease-out;
+  animation-duration: 400ms;
 }
 
 .shortenedLinks li:last-child {
   margin-bottom: 0;
+}
+
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  to {
+    opacity: 1;
+  }
 }
