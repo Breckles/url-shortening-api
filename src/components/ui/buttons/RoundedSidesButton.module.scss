@@ -13,3 +13,13 @@
 
   color: var(--button-text-color);
 }
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {
+  .button:hover {
+    cursor: pointer;
+    background-color: var(--button-hover-background-color);
+  }
+}

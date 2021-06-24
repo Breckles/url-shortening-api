@@ -39,3 +39,37 @@
 .button.copied {
   background-color: var(--shortened-link-button-copied-background-color);
 }
+
+
+////////////////// Tablets ////////////////////
+
+@media screen and (min-width: 850px) {
+  .shortenedLink {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 26px;
+    padding: 15px 30px;
+
+    font-size: 2rem;
+  }
+
+  .shortenedLink span {
+    padding: 0;
+  }
+
+  .longURL {
+    margin-right: auto;
+  }
+
+  .button {
+    width: 110px;
+    padding: 4px 0px 3px;
+  }
+
+}
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {}

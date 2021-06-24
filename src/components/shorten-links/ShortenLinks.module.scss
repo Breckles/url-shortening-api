@@ -10,6 +10,7 @@
 .shortenLinkForm {
   position: relative;
   z-index: 2;
+  padding: 24px;
 }
 
 .shortenedLinks {
@@ -32,3 +33,17 @@
   background-color: var(--shorten-links-background-color);
   opacity: 0.25;
 }
+
+
+////////////////// Tablets ////////////////////
+
+@media screen and (min-width: 750px) {
+  .shortenLinkForm {
+    padding: 52px 65px;
+  }
+}
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {}

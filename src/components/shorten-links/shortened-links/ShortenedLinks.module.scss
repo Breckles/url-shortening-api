@@ -25,3 +25,12 @@
     opacity: 1;
   }
 }
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {
+  .shortenedLinks li {
+    margin-bottom: 15px;
+  }
+}

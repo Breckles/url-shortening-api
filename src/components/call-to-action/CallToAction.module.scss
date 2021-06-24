@@ -5,6 +5,8 @@
   justify-content: center;
   background-color: var(--call-to-action-background-color);
   background-image: url('../../assets/images/bg-boost-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .callToAction h3 {

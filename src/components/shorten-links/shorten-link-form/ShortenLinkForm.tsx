@@ -43,12 +43,12 @@ const ShortenLinkForm = ({
     event.preventDefault();
     setInputError(null);
 
-    onAddShortenedLink({
-      full_short_link: 'eggy',
-      original_link: 'adhashd;fjhsdfkljh',
-      code: Date.now().toString(),
-    });
-    return;
+    // onAddShortenedLink({
+    //   full_short_link: 'eggy',
+    //   original_link: 'adhashd;fjhsdfkljh',
+    //   code: Date.now().toString(),
+    // });
+    // return;
 
     const linkInputEl = linkInputRef.current!;
     let errorMessage = null;
@@ -77,28 +77,6 @@ const ShortenLinkForm = ({
       setInputError(errorMessage);
     }
   };
-
-  let content = (
-    <Fragment>
-      <input
-        className={inputError ? classes.error : ''}
-        type="url"
-        placeholder="Shorten a link here..."
-        aria-label="Shorten a link here"
-        title="Shorten a link here"
-        ref={linkInputRef}
-        required
-      />
-      {inputError && <span className={classes.errorText}>{inputError}</span>}
-      <RoundedCornersButton className={classes.button} type="submit">
-        Shorten It!
-      </RoundedCornersButton>
-    </Fragment>
-  );
-
-  if (isLoading) {
-    content = <LoadingSpinner />;
-  }
 
   return (
     <form

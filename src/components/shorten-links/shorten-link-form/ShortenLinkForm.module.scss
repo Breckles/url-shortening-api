@@ -2,12 +2,12 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
-  padding: 24px;
 
   border-radius: 10px;
   background-color: var(--shorten-link-form-background-color);
   background-image: url('../../../assets/images/bg-shorten-mobile.svg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: top right;
 }
 
@@ -29,8 +29,10 @@
 
 .form input.error {
   box-shadow:
-    3px 3px var(--input-error-border-color) inset,
-    -3px -3px var(--input-error-border-color) inset;
+    0px 3px var(--input-error-border-color) inset,
+    -3px 0px var(--input-error-border-color) inset,
+    0px -3px var(--input-error-border-color) inset,
+    3px 0px var(--input-error-border-color) inset;
 }
 
 .form input::placeholder {
@@ -53,3 +55,43 @@
   height: 4.8rem;
   font-size: 1.7rem;
 }
+
+
+////////////////// Tablets ////////////////////
+
+@media screen and (min-width: 850px) {
+  .form {
+    flex-direction: row;
+    background-image: url('../../../assets/images/bg-shorten-desktop.svg');
+  }
+
+  .form input,
+  .button {
+    height: 6.4rem;
+    border-radius: 10px;
+  }
+
+  .form input {
+    flex: 4;
+    padding: 5px 30px 0;
+
+    font-size: 2rem;
+  }
+
+  .errorText {
+    position: absolute;
+    top: calc(50% + 5rem);
+    font-size: 1.5rem;
+  }
+
+  .button {
+    flex: 1;
+    padding-top: 4px;
+    font-size: 1.9rem;
+  }
+}
+
+
+////////////////// Wider Screens ////////////////////
+
+@media screen and (min-width: 1200px) {}
