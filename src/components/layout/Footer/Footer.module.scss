@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
-  padding: 55px;
+
 
   background-color: var(--footer-background-color);
 
@@ -47,14 +47,37 @@
 }
 
 
-///////////////////////////////////////////////////
+///// Tablets and up //////////////////////////
 
-// .siteLinks a:hover {
-//   color: var(--footer-link-hover-color);
-// }
+@media screen and (min-width: 950px) {
+  .footer {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10%;
+  }
 
-// .socialMediaLinks a:hover {
-//   path {
-//     fill: var(--footer-link-hover-color);
-//   }
-// }
+  .footer img {
+    margin-right: auto;
+  }
+
+  .siteLinks {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 85px;
+
+    li {
+      align-items: flex-start;
+    }
+  }
+
+  .siteLinks a:hover {
+    color: var(--footer-link-hover-color);
+  }
+
+  .socialMediaLinks a:hover {
+    path {
+      fill: var(--footer-link-hover-color);
+    }
+  }
+}
