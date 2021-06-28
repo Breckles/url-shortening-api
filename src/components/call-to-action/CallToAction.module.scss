@@ -19,3 +19,20 @@
   margin-top: 20px;
   width: 205px;
 }
+
+
+///// Wider screens //////////////////////////
+
+@media screen and (min-width: 1200px) {
+  .callToAction {
+    background-image: url('../../assets/images/bg-boost-desktop.svg');
+  }
+
+  .callToAction h3 {
+    font-size: 4rem;
+  }
+
+  .button {
+    margin-top: 25px;
+  }
+}
