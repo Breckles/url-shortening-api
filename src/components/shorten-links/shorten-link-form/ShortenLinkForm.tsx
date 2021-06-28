@@ -43,12 +43,12 @@ const ShortenLinkForm = ({
     event.preventDefault();
     setInputError(null);
 
-    // onAddShortenedLink({
-    //   full_short_link: 'eggy',
-    //   original_link: 'adhashd;fjhsdfkljh',
-    //   code: Date.now().toString(),
-    // });
-    // return;
+    onAddShortenedLink({
+      full_short_link: 'eggy',
+      original_link: 'adhashd;fjhsdfkljh',
+      code: Date.now().toString(),
+    });
+    return;
 
     const linkInputEl = linkInputRef.current!;
     let errorMessage = null;

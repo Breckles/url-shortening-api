@@ -4,6 +4,7 @@
 
   border-radius: 5px;
   background-color: var(--selling-point-background-color);
+  text-align: center;
 }
 
 .iconContainer {
@@ -18,4 +19,17 @@
 
   border-radius: 50%;
   background-color: var(--icon-background-color);
+}
+
+
+///// Wider screens //////////////////////////
+
+@media screen and (min-width: 1200px) {
+  .sellingPoint {
+    text-align: left;
+  }
+
+  .iconContainer {
+    left: 30px;
+  }
 }
